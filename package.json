@@ -1,11 +1,44 @@
 {
+  "name": "server",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
   "scripts": {
     "test": "echo \"Error no test specified\" & exit 1",
-    "start": "npm start --prefix server",
-    "client": "npm start --prefix client",
-    "server": "node index.js",
-    "install": "npm install --prefix client && npm install --prefix server",
-    "dev": "concurrently\"npm run server\" \"npm run client\"",
-    "heroku-postbuild": "npm run build --prefix client"
-  }
+    "client": "npm start client",
+    "heroku-postbuild": "npm run build /client",
+    "start": "node index.js",
+    "server": "nodemon index.js",
+    "install": "npm install --prefix client && npm install"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "body-parser": "^1.19.0",
+    "cors": "^2.8.5",
+    "dotenv": "^10.0.0",
+    "express": "^4.17.1",
+    "jsonwebtoken": "^8.5.1",
+    "mongoose": "^6.0.10",
+    "morgan": "^1.10.0",
+    "multer": "^1.4.4",
+    "nodemailer": "^6.7.2",
+    "nodemailer-mailgun-transport": "^2.1.3",
+    "nodemon": "^2.0.15",
+    "passport": "^0.5.1",
+    "passport-jwt": "^4.0.0"
+  },
+  "engines": {
+    "node": "14.17.4",
+    "npm": "6.14.14"
+  },
+  "repository": {
+    "type": "ssh",
+    "url": "git+https://git@github.com/omer-ibrahim.com/omeribrahim.git"
+  },
+  "bugs": {
+    "url": "https://github.com/omer-ibrahim.com/omeribrahim/issues"
+  },
+  "homepage": "https://github.com/omer-ibrahim.com/omeribrahim#readme"
 }
