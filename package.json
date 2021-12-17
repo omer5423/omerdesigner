@@ -8,8 +8,7 @@
     "client": "npm start client",
     "heroku-postbuild": "npm run build /client",
     "start": "node index.js",
-    "server": "nodemon index.js",
-    "install": "npm install --prefix client && npm install"
+    "install": "npm install --prefix client && npm install --prefix server"
   },
   "author": "",
   "license": "ISC",
